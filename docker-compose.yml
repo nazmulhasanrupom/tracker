@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  tracker-app:
+    build: .
+    container_name: programming-tracker
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./tracker.db:/app/tracker.db
+    environment:
+      - PORT=3000
+    restart: unless-stopped

@@ -5,7 +5,7 @@ services:
     build: .
     container_name: programming-tracker
     ports:
-      - "3000:3000"
+      - "3739:3739"
     volumes:
       - ./tracker.db:/app/tracker.db
     environment:

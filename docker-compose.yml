@@ -9,6 +9,6 @@ services:
     volumes:
       - ./data:/app/data
     environment:
-      - PORT=3000
+      - PORT=3739
       - DB_PATH=/app/data/tracker.db
     restart: unless-stopped

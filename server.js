@@ -11,7 +11,8 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Initialize database
-const db = new sqlite3.Database('./tracker.db', (err) => {
+const dbPath = process.env.DB_PATH || './tracker.db';
+const db = new sqlite3.Database(dbPath, (err) => {
   if (err) {
     console.error('Error opening database:', err);
   } else {
